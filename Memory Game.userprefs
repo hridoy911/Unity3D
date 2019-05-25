@@ -1,0 +1,25 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\totalTimeDisplay_obj.cs">
+    <Files>
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Cards.cs" Line="16" Column="2" />
+      <File FileName="Assets\Scripts\totalTimeDisplay1.cs" Line="15" Column="77" />
+      <File FileName="Assets\Scripts\totalTimeDisplay.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MatchMakingGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MenuBehave.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SC5.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SC4.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ScoreManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SC3.cs" Line="30" Column="22" />
+      <File FileName="Assets\Scripts\SC6.cs" Line="25" Column="35" />
+      <File FileName="Assets\Scripts\totalTimeDisplay_dl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\finishinG.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\totalTimeDisplay_obj.cs" Line="15" Column="73" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

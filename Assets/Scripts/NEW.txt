@@ -1,0 +1,79 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using Firebase;
+using Firebase.Database;
+using Firebase.Unity.Editor;
+
+public class FirebaseRealTimeDatabaseHandler : MonoBehaviour {
+
+	public string databaseURL;
+
+	FirebaseApp m_FirebaseApp;
+	DependencyStatus m_DependencyStatus;
+	DatabaseReference m_DatabaseReference;
+
+	private bool m_IsFirebaseDatabaseReady = false;
+
+	// Use this for initialization
+	void Start () {
+
+		PreProcess ();
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+
+
+	private void PreProcess(){
+
+
+
+		FirebaseApp.CheckAndFixDependenciesAsync ().ContinueWith (task => {
+
+			m_DependencyStatus = task.Result;
+			if(m_DependencyStatus == DependencyStatus.Available){
+
+				m_FirebaseApp = FirebaseApp.DefaultInstance;
+				m_FirebaseApp.SetEditorDatabaseUrl(databaseURL);
+
+				if(m_FirebaseApp.Options.DatabaseUrl != null){
+
+					m_FirebaseApp.SetEditorDatabaseUrl(m_FirebaseApp.Options.DatabaseUrl);
+				}
+
+				m_IsFirebaseDatabaseReady = true;
+			}else{
+
+				Debug.Log("Database exception : " + m_DependencyStatus);
+			}
+		});
+
+	}
+
+	public void RegisterUserOnDatabase(){
+
+
+
+		FirebaseDatabase.DefaultInstance.RootReference
+			.Child ("User")
+			.SetValueAsync ("Ajaira").ContinueWith (task => {
+
+				if(task.IsCompleted){
+
+					Debug.Log("Complete");
+
+				}else{
+
+					Debug.Log("Not complete");
+				}
+			});
+	}
+}
